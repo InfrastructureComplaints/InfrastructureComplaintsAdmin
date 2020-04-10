@@ -84,6 +84,4 @@ public class ListComlaintsAdmin extends AppCompatActivity {
 
     }
 
-
-
 }

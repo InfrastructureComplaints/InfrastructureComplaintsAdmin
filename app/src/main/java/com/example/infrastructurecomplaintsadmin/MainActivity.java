@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "User found and password matched", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(MainActivity.this, ListComlaintsAdmin.class);
                                     intent.putExtra("Username",username);
-                                    intent.putExtra("Choice","Admin");
+                                    //intent.putExtra("Choice","Admin");
                                     startActivity(intent);
                                     finish();
                                 }
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "User found and password matched", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(MainActivity.this,ListComplaintsDep.class);
                                     intent.putExtra("Username",username);
-                                    intent.putExtra("Choice","Department");
+                                    //intent.putExtra("Choice","Department");
                                     startActivity(intent);
                                     finish();
                                 }
