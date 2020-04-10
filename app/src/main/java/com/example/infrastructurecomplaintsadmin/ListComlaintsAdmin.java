@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +38,35 @@ public class ListComlaintsAdmin extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
 
 
+    //Option Selection Listener
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch(item.getItemId()) {
+            case R.id.option_user:
+                Intent intent_1 = new Intent(this,BlockUser.class);
+                startActivity(intent_1);
+                return true;
+            case R.id.option_department :
+                Toast.makeText(this, "Department", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.option_refresh :
+                Toast.makeText(this, "Refreshed", Toast.LENGTH_SHORT).show();
+                Intent intent_2 = new Intent(this,ListComlaintsAdmin.class);
+                intent_2.putExtra("Username",email);
+                startActivity(intent_2);
+                finish();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+
+    }
+
+
+    //OptionMenu Inflator
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

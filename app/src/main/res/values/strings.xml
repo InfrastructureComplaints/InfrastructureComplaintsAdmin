@@ -18,4 +18,8 @@
     <string name="text_resolved">Update Resolved Complaint and New Image</string>
     <string name="button_upload">Upload</string>
     <string name="button_update">Update</string>
+    <string name="text_block_user">Enter User Mail Id</string>
+    <string name="button_block">Block</string>
+    <string name="button_unblock">Unblock</string>
+
 </resources>

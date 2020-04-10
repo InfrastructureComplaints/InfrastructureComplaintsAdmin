@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/refresh"
+    <item android:id="@+id/option_refresh"
         android:icon="@drawable/ic_refresh"
         android:title="Refresh"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/user"
+    <item android:id="@+id/option_user"
 
-        android:title="Users"
+        android:title="Block User"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/department"
+    <item android:id="@+id/option_department"
 
         android:title="Departments"
         app:showAsAction="never"/>
