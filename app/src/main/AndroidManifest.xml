@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListComplaintsDep"></activity>
+        <activity android:name=".ComplaintDept"></activity>
+        <activity android:name=".ComplaintAdmin" />
+        <activity android:name=".ListComplaintsDep" />
         <activity android:name=".ListComlaintsAdmin" />
         <activity android:name=".MainActivity">
             <intent-filter>
