@@ -60,11 +60,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         @Override
         public void onClick(View v) {
             // Toast.makeText(v.getContext(), "Complaint clicked", Toast.LENGTH_SHORT).show();
-            /*Intent intent = new Intent(v.getContext(), Complaint.class);
+            Intent intent = new Intent(v.getContext(), ComplaintAdmin.class);
             intent.putExtra("Subject", cmps.get(getAdapterPosition()).Subject);
             v.getContext().startActivity(intent);
 
-             */
+
 
 
         }

@@ -5,4 +5,12 @@
     <string name="button_login">Login</string>
     <string name="text_username">Username</string>
     <string name="text_password">Password</string>
+    <string name="button_approve">Approve</string>
+    <string name="button_reject">Reject</string>
+    <string name="text_status_heading">Status</string>
+    <string name="text_subject">Subject</string>
+    <string name="text_description">Description</string>
+    <string name="text_user">User</string>
+    <string name="text_lodged_user">Lodged By User</string>
+    <string name="button_delete">Delete</string>
 </resources>
