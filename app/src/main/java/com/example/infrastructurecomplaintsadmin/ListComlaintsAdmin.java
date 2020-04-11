@@ -48,7 +48,8 @@ public class ListComlaintsAdmin extends AppCompatActivity {
                 startActivity(intent_1);
                 return true;
             case R.id.option_department :
-                Toast.makeText(this, "Department", Toast.LENGTH_SHORT).show();
+                Intent intent_3 = new Intent(this,ListDepartment.class);
+                startActivity(intent_3);
                 return true;
             case R.id.option_refresh :
                 Toast.makeText(this, "Refreshed", Toast.LENGTH_SHORT).show();

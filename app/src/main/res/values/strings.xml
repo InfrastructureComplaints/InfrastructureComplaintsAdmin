@@ -21,5 +21,10 @@
     <string name="text_block_user">Enter User Mail Id</string>
     <string name="button_block">Block</string>
     <string name="button_unblock">Unblock</string>
+    <string name="text_name_cd">Name</string>
+    <string name="text_email_cd">Email</string>
+    <string name="text_contact_cd">Contact No</string>
+    <string name="text_password_cd">Password</string>
+    <string name="button_create_dept">Create</string>
 
 </resources>

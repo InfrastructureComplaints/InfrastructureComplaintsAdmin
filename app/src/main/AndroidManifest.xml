@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BlockUser"></activity>
+        <activity android:name=".CreateDepartment"></activity>
+        <activity android:name=".ListDepartment" />
+        <activity android:name=".Department" />
+        <activity android:name=".BlockUser" />
         <activity android:name=".StatusUpdateDept" />
         <activity android:name=".CmpImage" />
         <activity android:name=".ComplaintDept" />
