@@ -26,5 +26,10 @@
     <string name="text_contact_cd">Contact No</string>
     <string name="text_password_cd">Password</string>
     <string name="button_create_dept">Create</string>
+    <string name="text_name_d_heading">Name</string>
+    <string name="text_email_d_heading">Email</string>
+    <string name="text_contact_d_heading">Contact No</string>
+    <string name="button_delete_d">Delete Department</string>
+
 
 </resources>
