@@ -4,76 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/admin_app_home_page"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/text_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="352dp"
+        android:layout_height="67dp"
         android:ems="10"
-        android:inputType="textPersonName"
-
+        android:textColor="@color/White"
         android:hint="@string/text_username"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.455" />
 
     <EditText
         android:id="@+id/text_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="352dp"
+        android:layout_height="67dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/text_password"
+        android:inputType="textPersonName"
+        android:textColor="@color/White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_username"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="187dp"
+        android:layout_height="129dp"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_password"
-        app:layout_constraintVertical_bias="0.319"
-        android:padding="20dp">
+        app:layout_constraintVertical_bias="0.179">
 
         <RadioButton
             android:id="@+id/radioButton_admin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
             android:padding="10dp"
-            android:text="@string/radio_admin"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/radio_admin" />
 
         <RadioButton
             android:id="@+id/radioButton_dept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
             android:padding="10dp"
-            android:text="@string/radio_dept"
-            android:onClick="onRadioButtonClicked"/>
+            android:text="@string/radio_dept" />
     </RadioGroup>
 
     <Button
         android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:background="@color/Blue"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:onClick="login"
         android:text="@string/button_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.502"
-        android:onClick="login"/>
+        app:layout_constraintVertical_bias="0.625" />
 </androidx.constraintlayout.widget.ConstraintLayout>
