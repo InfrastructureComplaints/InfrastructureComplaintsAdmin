@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.ImageView;
@@ -23,6 +24,8 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class StatusUpdateDept extends AppCompatActivity {
+
+    private static final String TAG = "ImageChoosen";
 
     //Image purpose variables
     private static final int PICK_IMAGE = 1;
@@ -78,8 +81,7 @@ public class StatusUpdateDept extends AppCompatActivity {
 
         if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null) {
             mImageURI = data.getData();
-
-            //Picasso.with(this).load(mImageURI).into(imageView);
+            //Picasso.with(this).load(data.getData()).into(imageView);
             //Glide.with(this).load(mImageURI).into(imageView);
             imagePlucked = true;
             Toast.makeText(this, "imagePlucked", Toast.LENGTH_SHORT).show();

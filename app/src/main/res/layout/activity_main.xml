@@ -67,11 +67,8 @@
 
     <Button
         android:id="@+id/button_login"
-        android:layout_width="118dp"
-        android:layout_height="48dp"
-        android:background="@color/Blue"
-        android:textColor="@color/White"
-        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="login"
         android:text="@string/button_login"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,5 +76,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintVertical_bias="0.482" />
 </androidx.constraintlayout.widget.ConstraintLayout>
