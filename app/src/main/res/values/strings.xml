@@ -30,6 +30,9 @@
     <string name="text_email_d_heading">Email</string>
     <string name="text_contact_d_heading">Contact No</string>
     <string name="button_delete_d">Delete Department</string>
+    <string name="text_select_priority">Select Priority</string>
+    <string name="text_select_department">Select Department</string>
+    <string name="button_approve_db">Approve</string>
 
 
 </resources>

@@ -27,8 +27,9 @@ public class ComplaintAdmin extends AppCompatActivity {
     private TextView text_user;
     private TextView text_status;
     private String docId;
-    private Button app,rej,del;
+    private Button app,rej,del,feed;
     private String subject;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +43,14 @@ public class ComplaintAdmin extends AppCompatActivity {
         text_description = (TextView)findViewById(R.id.text_description_c);
         text_user = (TextView)findViewById(R.id.text_user_c);
         text_status = (TextView)findViewById(R.id.text_status);
-        app = (Button)findViewById(R.id.button_approve);
+        app = (Button)findViewById(R.id.button_approve_db);
         rej = (Button)findViewById(R.id.button_reject);
         del = (Button)findViewById(R.id.button_delete);
+        feed = (Button) findViewById(R.id.button_feedback_admin);
         del.setVisibility(View.INVISIBLE);
         app.setVisibility(View.INVISIBLE);
         rej.setVisibility(View.INVISIBLE);
+        feed.setVisibility(View.INVISIBLE);
 
         //Getting databse instance
         db = FirebaseFirestore.getInstance();
@@ -63,8 +66,21 @@ public class ComplaintAdmin extends AppCompatActivity {
                     status = (String) doc.get("Status");
                     if(status.equals("Rejected")) {
                         del.setVisibility(View.VISIBLE);
+
                     }
-                    else {
+                    else if(status.equals("Approved")) {
+                        app.setVisibility(View.INVISIBLE);
+                        del.setVisibility(View.INVISIBLE);
+                        rej.setVisibility(View.INVISIBLE);
+                    }
+                    else if(status.equals("Resolved")){
+                        app.setVisibility(View.VISIBLE);
+                        rej.setVisibility(View.INVISIBLE);
+                        del.setVisibility(View.VISIBLE);
+                        feed.setVisibility(View.VISIBLE);
+                    }
+                    else if(status.equals("Pending")) {
+                        del.setVisibility(View.INVISIBLE);
                         app.setVisibility(View.VISIBLE);
                         rej.setVisibility(View.VISIBLE);
                     }
@@ -88,7 +104,10 @@ public class ComplaintAdmin extends AppCompatActivity {
 
     public void approve(View view) {
 
-        Toast.makeText(this, "Approved", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,ApproveComplaint.class);
+        intent.putExtra("ComplaintId",docId);
+        startActivity(intent);
+        finish();
     }
 
     public void reject(View view) {
@@ -119,7 +138,25 @@ public class ComplaintAdmin extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()) {
                     Toast.makeText(ComplaintAdmin.this, "Complaint Deleted", Toast.LENGTH_SHORT).show();
-                    finish();
+                    db.collection("feedbacks").whereEqualTo("Complaint_Id",docId).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if(task.isSuccessful()) {
+                                String feed_id = task.getResult().getDocuments().get(0).getId();
+                                db.collection("feedbacks").document(feed_id).delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()) {
+                                            Toast.makeText(ComplaintAdmin.this, "Feedback deleted", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(ComplaintAdmin.this,ListComlaintsAdmin.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    });
                 }
                 else {
                     Toast.makeText(ComplaintAdmin.this, "Something went wrong", Toast.LENGTH_SHORT).show();
@@ -131,4 +168,16 @@ public class ComplaintAdmin extends AppCompatActivity {
     }
 
 
+
+    public void getFeedback(View view) {
+        Intent intent = new Intent(this,Feedback.class);
+        intent.putExtra("ComplaintId",docId);
+        Toast.makeText(this,docId, Toast.LENGTH_SHORT).show();
+        startActivity(intent);
+    }
+
+    public void viewImage(View view) {
+        Toast.makeText(this, "Image", Toast.LENGTH_SHORT).show();
+
+    }
 }
