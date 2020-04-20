@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/Green"
         android:onClick="approve"
         android:text="@string/button_approve"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/red"
         android:onClick="reject"
         android:text="@string/button_reject"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,6 +104,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="308dp"
         android:text="TextView"
+        android:textStyle="bold"
+        android:textColor="@color/Gold"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/red"
         android:onClick="delete"
         android:text="@string/button_delete"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -139,16 +141,16 @@
 
     <Button
         android:id="@+id/button_image_admin_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Image"
+        android:layout_width="365dp"
+        android:layout_height="60dp"
         android:onClick="viewImage"
+        android:text="View Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.093" />
 
     <Button
         android:id="@+id/button_feedback_admin"

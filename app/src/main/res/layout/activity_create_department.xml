@@ -8,66 +8,68 @@
 
     <EditText
         android:id="@+id/text_name_cd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="376dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="@string/text_name_cd"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/text_email_cd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="376dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/text_email_cd"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_name_cd" />
 
     <EditText
         android:id="@+id/text_contact_cd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="376dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/text_contact_cd"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_email_cd" />
 
     <EditText
         android:id="@+id/text_password_cd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_width="376dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="@string/text_password_cd"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_contact_cd" />
 
     <Button
         android:id="@+id/button_create_dept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="129dp"
+        android:layout_height="54dp"
+        android:background="@color/Green"
+        android:onClick="createDepartment"
         android:text="@string/button_create_dept"
+        android:textColor="@color/White"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_password_cd"
-        app:layout_constraintVertical_bias="0.713"
-        android:onClick="createDepartment"/>
+        app:layout_constraintVertical_bias="0.147" />
 </androidx.constraintlayout.widget.ConstraintLayout>

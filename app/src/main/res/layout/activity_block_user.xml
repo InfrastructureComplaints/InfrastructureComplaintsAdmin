@@ -8,55 +8,62 @@
 
     <TextView
         android:id="@+id/text_block_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="176dp"
         android:gravity="center"
         android:text="@string/text_block_user"
+        android:textColor="@color/Blue"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/text_block_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_width="375dp"
+        android:layout_height="67dp"
         android:ems="10"
         android:hint="@string/text_username"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_block_user" />
 
     <Button
-        android:id="@+id/button_block"
-        android:layout_width="93dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="344dp"
-        android:onClick="block"
-        android:text="@string/button_block"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_unblock"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_block_user"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/button_unblock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="344dp"
-        android:layout_marginEnd="56dp"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="550dp"
+        android:background="@color/Green"
         android:onClick="unBlock"
         android:text="@string/button_unblock"
+        android:textColor="@color/White"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_block_user"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.037" />
+
+    <Button
+        android:id="@+id/button_block"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="550dp"
+        android:background="@color/red"
+        android:onClick="block"
+        android:text="@string/button_block"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_unblock"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_block_user"
+        app:layout_constraintVertical_bias="0.037" />
 </androidx.constraintlayout.widget.ConstraintLayout>

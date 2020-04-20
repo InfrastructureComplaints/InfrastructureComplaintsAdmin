@@ -15,10 +15,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -27,10 +27,10 @@
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toEndOf="@+id/text_select_priority"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031">
+        app:layout_constraintVertical_bias="0.125">
 
         <RadioButton
             android:id="@+id/radio_high"
@@ -61,38 +61,45 @@
 
     <TextView
         android:id="@+id/text_select_department"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="37dp"
         android:text="@string/text_select_department"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintVertical_bias="0.515" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="382dp"
+        android:layout_height="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637" />
 
     <Button
         android:id="@+id/button_approve_db"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_width="238dp"
+        android:layout_height="56dp"
+        android:background="@color/Green"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:onClick="approveComplaint"
         android:text="@string/button_approve_db"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
-        android:onClick="approveComplaint"/>
+        app:layout_constraintVertical_bias="0.187" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

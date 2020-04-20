@@ -89,9 +89,10 @@
 
     <Button
         android:id="@+id/button_delete_d"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_width="285dp"
+        android:layout_height="58dp"
+        android:background="@color/red"
+        android:onClick="deleteDepartment"
         android:text="@string/button_delete_d"
         android:textColor="#FAF6F6"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,6 +100,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837"
-        android:onClick="deleteDepartment"/>
+        app:layout_constraintVertical_bias="0.837" />
 </androidx.constraintlayout.widget.ConstraintLayout>
